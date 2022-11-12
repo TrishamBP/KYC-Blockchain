@@ -47,5 +47,5 @@ You can deploy in the localhost network following these steps: <br>
 ` npx hardhat run --network localhost scripts/deploy.js `
 3. Deploy on goerli test net.<br>
 ` npx hardhat run --network goerli scripts/deploy.js ` <br>
-Contract address after being deployed on goerli test net-0xE885Cded2D78E9C0b9D3679e93252Ed9623Ba646(https://goerli.etherscan.io/address/0xe885cded2d78e9c0b9d3679e93252ed9623ba646#code)
+Contract address after being deployed on goerli test net-0xE885Cded2D78E9C0b9D3679e93252Ed9623Ba646<br>(https://goerli.etherscan.io/address/0xe885cded2d78e9c0b9d3679e93252ed9623ba646#code)
 
