@@ -17,9 +17,9 @@ The blockchain architecture and the DLT allow us to collect information from var
 
 | **Function Name**        | **Input Params**                                     | **Return value**              | **Description**                                             |
 | ------------------------ | ---------------------------------------------------- | ----------------------------- | ----------------------------------------------------------- |
-| addBank()                | Bank Name, Eth address of bank, Bank reg number                                                 | -                             | To add new bank                                             |
-| updateBankDetails()      | metamask `address` of bank,<br>email,<br>name        | -                             | To update the name & email of the bank                      |
-| activateDeactivateBank() | metamask `address` of bank,<br>`isActivated` boolean | -                             | To activate & deactivate bank from the toggle               |
+| addBank()                | Bank Name, metamask `address` of bank,<br> Bank reg number                        | -                             | To add new bank                                             |
+| isAllowedToVote()      | metamask `address` of bank,<br> boolean value        | -                             | used by the admin to change the status of isAllowedToVote of any of the banks at any point in time                      |
+| removeBank() | metamask `address` of bank | -                             | To remove the bank               |
 
 ### Bank Interface Methods
 
