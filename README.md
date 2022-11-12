@@ -1,2 +1,2 @@
-# KYC-Blockchain
-A Decentralized KYC Verification Process for Banks.
+# Decentralised KYC Etherum
+Know your customer, or KYC, as it is referred to, originated as a standard to combat the laundering of illicit money flowing from terrorism, organized crime, and drug trafficking. The primary process behind KYC is that governments and enterprises need to track customers for illegal and money laundering activities. Moreover, KYC also enables banks to understand their customers and their financial dealings better. This helps them manage their risks and make better decisions.KYC may be a manual, time-consuming, and redundant across institutions. Sharing KYC information on Blockchain would enable financial institutions to deliver better compliance outcomes, increase efficiency, and improve customer experience.
