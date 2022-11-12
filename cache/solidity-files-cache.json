@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\trish\\OneDrive\\Desktop\\Blockchain Development\\IIT-B Blockchain Course\\Assignments\\KYC\\Phase-3\\HardhatTutorial\\contracts\\KYC.sol": {
+      "lastModificationDate": 1667968785991,
+      "contentHash": "0cdeeacc1cd0bf912eda4b46019dcd61",
+      "sourceName": "contracts/KYC.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "KYC"
+      ]
+    }
+  }
+}

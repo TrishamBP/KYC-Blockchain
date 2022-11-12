@@ -1,0 +1,14 @@
+await bank.addCustomer('Sid','a')
+await kyc.addCustomer('Sid','a')
+await bank.viewBankDetails('0x70997970C51812dc3A010C7d01b50e0d17dc79C8')
+const bank=await KYC.attach('0x70997970C51812dc3A010C7d01b50e0d17dc79C8')
+const kyc=await KYC.attach('0x70997970C51812dc3A010C7d01b50e0d17dc79C8')
+await kyc.addBank('HDFC','0x70997970C51812dc3A010C7d01b50e0d17dc79C8',2)
+await kyc.viewBankDetails('0x70997970C51812dc3A010C7d01b50e0d17dc79C8')
+await kyc.addBank('SBI','0x70997970C51812dc3A010C7d01b50e0d17dc79C8',1)
+await kyc.addBank('SBI',0x70997970C51812dc3A010C7d01b50e0d17dc79C8,1)
+await kyc.addBank(SBI,0x70997970C51812dc3A010C7d01b50e0d17dc79C8,1)
+await kyc.addBank('SBI',0x70997970C51812dc3A010C7d01b50e0d17dc79C8,1)
+const kyc=await KYC.attach('0x5fbdb2315678afecb367f032d93f642f64180aa3')
+const KYC=await ethers.getContractFactory('KYC');
+.help
