@@ -16,3 +16,10 @@ The blockchain architecture and the DLT allow us to collect information from var
 ## Quick Start
 Install the dependencies <br>
 ` npm install `
+To compile your contracts in your Hardhat project, use the built-in compile task: <br>
+` npx hardhat compile `
+You can deploy in the localhost network following these steps:
+1. Start a local node <br>
+` npx hardhat node `
+2. Open a new terminal and deploy the smart contract in the localhost network. <br>
+` npx hardhat run --network localhost scripts/deploy.js `
