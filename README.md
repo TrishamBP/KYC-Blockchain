@@ -14,5 +14,5 @@ The blockchain architecture and the DLT allow us to collect information from var
 - In short, there are two conditions that are to be checked: the number of upvotes and downvotes, and whether the number of downvotes is greater than one-third of the total banks on the network.
 - A bank can also report another bank if it finds that the other bank is corrupt and is verifying false customers. Such corrupt banks will then be banned from upvoting/downvoting further. If complaints against a particular bank are received from more than one-third of the total banks on the network, then that bank will be banned (i.e., isAllowedToVote will be set to false for that corrupt bank.)
 ## Quick Start
-Install the dependencies
+Install the dependencies <br>
 ` npm install `
