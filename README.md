@@ -15,10 +15,10 @@ The blockchain architecture and the DLT allow us to collect information from var
 - A bank can also report another bank if it finds that the other bank is corrupt and is verifying false customers. Such corrupt banks will then be banned from upvoting/downvoting further. If complaints against a particular bank are received from more than one-third of the total banks on the network, then that bank will be banned (i.e., isAllowedToVote will be set to false for that corrupt bank.)
 ## Quick Start
 Install the dependencies <br>
-` npm install `
+` npm install ` <br>
 To compile your contracts in your Hardhat project, use the built-in compile task: <br>
-` npx hardhat compile `
-You can deploy in the localhost network following these steps:
+` npx hardhat compile ` <br>
+You can deploy in the localhost network following these steps: <br>
 1. Start a local node <br>
 ` npx hardhat node `
 2. Open a new terminal and deploy the smart contract in the localhost network. <br>
