@@ -13,6 +13,25 @@ The blockchain architecture and the DLT allow us to collect information from var
 - Other banks can also upvote/downvote customer data to demonstrate its authenticity. If the number of upvotes exceeds the number of downvotes, then the kycStatus of the corresponding customer is set to true. If a customer is downvoted by one-third of the banks on the network, then their kycStatus is changed to false, even if the number of upvotes is greater than the number of downvotes. For such logic, there should be a minimum of 5 or 10 banks on the network.
 - In short, there are two conditions that are to be checked: the number of upvotes and downvotes, and whether the number of downvotes is greater than one-third of the total banks on the network.
 - A bank can also report another bank if it finds that the other bank is corrupt and is verifying false customers. Such corrupt banks will then be banned from upvoting/downvoting further. If complaints against a particular bank are received from more than one-third of the total banks on the network, then that bank will be banned (i.e., isAllowedToVote will be set to false for that corrupt bank.)
+### Admin Interface Methods
+
+| **Function Name**        | **Input Params**                                     | **Return value**              | **Description**                                             |
+| ------------------------ | ---------------------------------------------------- | ----------------------------- | ----------------------------------------------------------- |
+| addBank()                | Bank Name, Eth address of bank, Bank reg number                                                 | -                             | To add new bank                                             |
+| updateBankDetails()      | metamask `address` of bank,<br>email,<br>name        | -                             | To update the name & email of the bank                      |
+| activateDeactivateBank() | metamask `address` of bank,<br>`isActivated` boolean | -                             | To activate & deactivate bank from the toggle               |
+
+### Bank Interface Methods
+
+| **Function Name**        | **Input Params**                                                             | **Return value**                                                 | **Description**                                                                                                     |
+| ------------------------ | ---------------------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| getCustomersOfBank()     | pageNumber                                                                   | `totalPages` count,<br>KycRequest[]                              | To get all the list of customer kyc requests that were added by the current bank                                    |
+| addKycRequest()          | Customer,<br>current `time` in epoch,<br>additional `notes`                  | -                                                                | To add new KYC request by adding new customer                                                                       |
+| reRequestForKycRequest() | metamask `address` of the customer,<br>additional `notes`                    | -                                                                | If bank rejects the KYC verification or If customer rejects permission issue then this request can be rasided again |
+| updateKycVerification()  | metamask `address` of customer,<br>`verified` boolean,<br>additional `notes` | -                                                                | To mark a customer as KYC verified                                                                                  |
+| searchCustomers()        | metamask `address` of customer                                               | `bool` to say customer exists or not,<br>Customer,<br>KycRequest | To fetch customer by metamask address                                                                               |
+
+### Customer Interface Methods
 ## Quick Start
 Install the dependencies <br>
 ` npm install ` <br>
