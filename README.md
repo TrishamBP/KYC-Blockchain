@@ -17,21 +17,24 @@ The blockchain architecture and the DLT allow us to collect information from var
 
 | **Function Name**        | **Input Params**                                     | **Return value**              | **Description**                                             |
 | ------------------------ | ---------------------------------------------------- | ----------------------------- | ----------------------------------------------------------- |
-| addBank()                | Bank Name, metamask `address` of bank,<br> Bank reg number                        | -                             | To add new bank                                             |
-| isAllowedToVote()      | metamask `address` of bank,<br> boolean value        | -                             | used by the admin to change the status of isAllowedToVote of any of the banks at any point in time                      |
+| addBank()                | Bank Name,<br> metamask `address` of bank,<br> Bank reg number                        | -                             | To add new bank                                             |
+| isAllowedToVote()      | metamask `address` of bank,<br> boolean value        | -                             | Used by the admin to change the status of isAllowedToVote of any of the banks at any point in time                      |
 | removeBank() | metamask `address` of bank | -                             | To remove the bank               |
 
 ### Bank Interface Methods
 
 | **Function Name**        | **Input Params**                                                             | **Return value**                                                 | **Description**                                                                                                     |
 | ------------------------ | ---------------------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| getCustomersOfBank()     | pageNumber                                                                   | `totalPages` count,<br>KycRequest[]                              | To get all the list of customer kyc requests that were added by the current bank                                    |
-| addKycRequest()          | Customer,<br>current `time` in epoch,<br>additional `notes`                  | -                                                                | To add new KYC request by adding new customer                                                                       |
-| reRequestForKycRequest() | metamask `address` of the customer,<br>additional `notes`                    | -                                                                | If bank rejects the KYC verification or If customer rejects permission issue then this request can be rasided again |
-| updateKycVerification()  | metamask `address` of customer,<br>`verified` boolean,<br>additional `notes` | -                                                                | To mark a customer as KYC verified                                                                                  |
-| searchCustomers()        | metamask `address` of customer                                               | `bool` to say customer exists or not,<br>Customer,<br>KycRequest | To fetch customer by metamask address                                                                               |
-
-### Customer Interface Methods
+| addKycRequest()          | Customer Username,<br> Hash of the customer data                  | -                                                                | To add new KYC request by adding new customer                                                                       |
+| removeKYCRequest() | Customer Username                    | -                                                                | Removes the KYC request |
+| addCutomer()  | Customer name, <br> customer data | -                                                                | To add a Customer |
+| viewCustomer()        | Customer Username  | This function allows a bank to view the details of a customer.                                                                               |
+| upvoteCustomer()  | Customer name | -                                                                | This function allows a bank to cast an upvote for a customer. |
+| downvoteCustomer()  | Customer name | -                                                                | This function allows a bank to cast an downvote for a customer. |
+| modifyCustomer()  | Customer name, <br> customer data | -                                                                | This function allows a bank to modify a customer's data. This will remove the customer from the KYC request list and set the number of downvotes and upvotes to zero. |
+| reportBank()  | Bank address , <br> bank name | -                                                                | This function is used to report a complaint against any bank in the network. |
+| getBankComplaints()  | Bank address | -                                                                | This function will be used to fetch bank complaints from the smart contract.   |
+| viewBankDetails()  | Bank address | The return type of this function will be of type Bank                                                               | This function is used to fetch the bank details. |
 ## Quick Start
 Install the dependencies <br>
 ` npm install ` <br>
